@@ -1,0 +1,60 @@
+"关闭与vi的兼容模式
+set nocp "nocompatible
+"搜索结果高亮
+set hls "hlsearch
+"增量搜索
+set is "incsearch
+"显示行号
+set nu  "number
+"退格删除indent,eol,start
+set backspace=indent,eol,start
+"按h,l时，如果到头，则跳到上一行或下一行
+set whichwrap=h,l
+"关闭备份
+set nobackup
+"高亮显示光标所在行
+set cursorline
+"禁用鼠标点击时的虚拟选中模式
+set mouse-=a
+"tab键对应的字符宽度
+set tabstop=4 "ts
+"自动缩进时的字符宽度
+set shiftwidth=4 "sw
+"自动将Tab转化为对应宽度的空格
+set et "noexpandtab
+"当使用et将Tab替换为空格之后,不用按Backspace多次， 按一下即可
+set smarttab
+"自动缩进
+set autoindent
+"防止特殊符号无法正常显示。 在 Unicode 中， 许多来自不同语言的字符， 如果字型足够近似的话， 会把它们放在同一个编码中。 但在不同编码中， 字符的宽度是不一样的。
+set ambiwidth=double
+"自动切换当前目录
+set autochdir
+"设置当前字符编码为 UTF-8
+set encoding=utf-8
+"设置菜单语言和编码
+set langmenu=zh_CN.UTF-8
+"设置提示信息的语言和编码
+language messages zh_CN.utf-8
+"设置编码的自动识别
+set fileencodings=utf-8,gbk,chinese,latin-1
+"设置字体
+set guifont=Courier\ 10\ Pitch\ 11
+"语法高亮
+syntax on
+"开启文件类型自动识别， 启用文件类型插件， 启用针对文件类型的自动缩进
+filetype plugin indent on
+
+"关闭菜单和工具栏，以最大化可视范围
+set guioptions-=m
+set guioptions-=T
+
+"使用主题
+if (has("gui_running"))
+        colorscheme	lucius 
+endif
+"键绑定
+map <F3> gg=G``
+map <F4> ggvGy``
+map <C-F5> "+y
+map <C-F6> "+p
